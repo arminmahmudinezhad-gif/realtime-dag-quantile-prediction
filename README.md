@@ -1,25 +1,18 @@
 # Real-Time DAG Quantile Prediction
 
-This repository contains the implementation of a real-time systems project on
-distributional execution-time prediction for DAG nodes running on a heterogeneous
-big/little multicore platform with DVFS.
+This repository contains a Real-Time Systems course project on execution-time
+quantile prediction for DAG tasks running on heterogeneous big/little multicore
+systems with DVFS.
 
-Instead of predicting only the average execution time or a single WCET value, the
-project predicts multiple conditional execution-time quantiles for each DAG node
-under different hardware and system-state conditions.
+The project predicts execution-time quantiles instead of only estimating average
+execution time or WCET. It also applies conformal calibration and evaluates the
+effect of predicted budgets on scheduling behavior.
 
-## Project Overview
-
-The goal is to estimate execution-time quantiles for DAG nodes based on:
-
-- DAG structure and node features
-- predecessor/successor and edge-related information
-- big/little core type
-- DVFS level
-- current system-state features
-- memory pressure, bus utilization, temperature, and jitter
-
-The model predicts:
+## Contents
 
 ```text
-q50, q90, q95, q99
+notebooks/
+  realtime_systems_project1.ipynb
+
+reports/
+  final_report.pdf
